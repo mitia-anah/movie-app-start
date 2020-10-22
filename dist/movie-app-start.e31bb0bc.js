@@ -29292,6 +29292,33 @@ function Input() {
     }
   }));
 }
+},{"react":"node_modules/react/index.js"}],"pages/MovieList.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.MovieList = MovieList;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const movies = [{
+  name: 'Man of Iron'
+}, {
+  name: 'Malokila'
+}, {
+  name: 'Sotasota'
+}];
+
+function MovieList() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, movies.map(movie => {
+    return /*#__PURE__*/_react.default.createElement("li", {
+      key: movie.name
+    }, movie.name);
+  })));
+}
 },{"react":"node_modules/react/index.js"}],"pages/App.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -29315,6 +29342,8 @@ var _Accordion = require("./Accordion");
 
 var _Input = require("./Input");
 
+var _MovieList = require("./MovieList");
+
 require("./App.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -29322,25 +29351,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "App"
-  }, /*#__PURE__*/_react.default.createElement(_Input.Input, null), /*#__PURE__*/_react.default.createElement(_Counter.Counter, null), /*#__PURE__*/_react.default.createElement(_Accordion.Accordion, null)));
+  }, /*#__PURE__*/_react.default.createElement(_MovieList.MovieList, null));
 }
 
-function HelloWorld({
-  name,
-  greeting = "Hello"
-}) {
-  return /*#__PURE__*/_react.default.createElement("h1", null, greeting, " ", name);
-}
-
-HelloWorld.propTypes = {
-  name: _propTypes.default.string,
-  greeting: _propTypes.default.string
-};
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","./Counter":"pages/Counter.js","./Accordion":"pages/Accordion.js","./Input":"pages/Input.js","./App.css":"pages/App.css"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","prop-types":"node_modules/prop-types/index.js","./Counter":"pages/Counter.js","./Accordion":"pages/Accordion.js","./Input":"pages/Input.js","./MovieList":"pages/MovieList.js","./App.css":"pages/App.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -29382,7 +29398,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52659" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55297" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
